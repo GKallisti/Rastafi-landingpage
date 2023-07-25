@@ -1,56 +1,122 @@
-/**
- * WHAT IS THIS FILE?
- *
- * Globally applied styles. No matter which components are in the page or matching route,
- * the styles in here will be applied to the Document, without any sort of CSS scoping.
- *
- */
+:root, :host {
+  --fa-style-family-classic: 'Font Awesome 6 Free';
+  --fa-font-solid: normal 900 1em/1 'Font Awesome 6 Free'; }
 
-:root {
-  --qwik-dark-blue: #006ce9;
-  --qwik-light-blue: #18b6f6;
-  --qwik-light-purple: #ac7ff4;
-  --qwik-dark-purple: #713fc2;
-  --qwik-dirty-black: #1d2033;
-  --qwik-dark-background: #151934;
-  --qwik-dark-text: #ffffff;
-}
+@font-face {
+  font-family: 'Font Awesome 6 Free';
+  font-style: normal;
+  font-weight: 900;
+  font-display: block;
+  src: url("/fonts/fa-solid-900.woff2") format("woff2"), url("/fonts/fa-solid-900.ttf") format("truetype"); }
 
-html {
-  line-height: 1;
-  -webkit-text-size-adjust: 100%;
-  -moz-tab-size: 4;
-  -o-tab-size: 4;
-  tab-size: 4;
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-}
+  @font-face {
+    font-family: Poppins;
+    src: url("/fonts/poppins-400.woff2");
+  font-weight: 400; }
 
-body {
+  @font-face {
+    font-family: Poppins;
+    src: url("/fonts/poppins-500.woff2");
+  font-weight: 500; }
+
+  @font-face {
+    font-family: Poppins;
+    src: url("/fonts/poppins-700.woff2");
+  font-weight: 700; }
+  
+.fas,
+.fa-solid {
+  font-weight: 900; }
+
+  :root {
+    --accent-color: #ff4000;
+    --foreground-color: #319190;;
+    --background-color: #260d0d;
+    --text-color:#ffc803;
+    --link-color:#ffefb5;
+
+  }
+
+  body {
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+    line-height: 2;
+    letter-spacing: 0.5px;
+    word-wrap: break-word;
+    font-weight: 400;
+
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    line-height: 1.4;
+    color: var(--accent-color);
+margin: 0;
+  }
+
+  p {
+    margin: 0;
+ }
+
+ ul{
   padding: 0;
-  margin: 0;
-  line-height: inherit;
+ }
+
+ .container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+  padding: 0 1rem;
+  width: 100%;
+  height: auto;
+  padding: 0 40px;
+  position: relative;
+  clear: both;
+  box-sizing: border-box;
+
+ }
+
+ .menu {
+  ul {
+    margin: 0;
+    list-style-type: none;
+
+    li {
+      margin: 0 20px 0 0;
+      display: inline-block;
+
+      &last-child {
+        margin-right: 0;
+      }
+
+      button {
+        color: var(--text-color);
+        font-family: poppins;
+        font-weight: 500;
+        transition: all 0.5s ease;
+        background: transparent;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        font-size: 18px;
+      }
+
+      &.current {
+        button {
+          color: var(--accent-color);
+        }
+      }
+    }
+  }
 }
 
-/**
- * WHAT IS THIS FILE?
- *
- * Globally applied styles. No matter which components are in the page or matching route,
- * the styles in here will be applied to the Document, without any sort of CSS scoping.
- *
- */
-html {
-  -webkit-text-size-adjust: 100%;
-  -moz-tab-size: 4;
-  -o-tab-size: 4;
-  tab-size: 4;
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-}
 
-body {
-  padding: 0;
-  line-height: inherit;
+.topbar.animate {
+background-color: var(--foreground-color);
+box-shadow: 0 0 20px rgba(0, 0, 0, 0.09);
 }
