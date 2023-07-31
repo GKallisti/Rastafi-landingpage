@@ -120,3 +120,20 @@ margin: 0;
 background-color: var(--foreground-color);
 box-shadow: 0 0 20px rgba(0, 0, 0, 0.09);
 }
+
+maintitle {
+  font-family: poppins;
+  font-weight: 500;
+  color: var(--accent-color);
+  font-size: 2.5em;
+  width: 100%;
+  height: auto;
+  clear: both;
+  float: left;
+}
+
+.maintittle h3 {
+  font-size: 2.5em;
+ font-weight: 600;
+
+}
